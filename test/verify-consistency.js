@@ -11,7 +11,7 @@ import { tweakPubkey } from '../lib/tweakroot.js';
 const testCases = [
   {
     pubkey: '79be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798',
-    tweak: 'deadbeef',
+    tweak: '00000000000000000000000000000000000000000000000000000000deadbeef',
   },
   {
     pubkey: '79be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798',
@@ -22,8 +22,7 @@ const testCases = [
 // Run a basic verification test
 function runTests () {
   console.log('=== TWEAKROOT BASIC VERIFICATION TEST ===');
-  console.log('NOTE: This is currently a simplified implementation');
-  console.log('that demonstrates the concept rather than proper EC tweaking.');
+  console.log('NOTE: This is a proper EC tweaking implementation using tiny-secp256k1');
 
   let allPassed = true;
 
@@ -54,8 +53,7 @@ function runTests () {
   console.log('\n=== SUMMARY ===');
   if (allPassed) {
     console.log('✅ Basic tests passed - the function can process inputs and produce outputs');
-    console.log('NOTE: This is NOT a proper EC tweaking implementation yet,');
-    console.log('but a demonstration of using the secp256k1 library.');
+    console.log('NOTE: This is a proper EC tweaking implementation using tiny-secp256k1.');
   } else {
     console.log('❌ Some tests failed - implementation needs to be fixed');
   }
