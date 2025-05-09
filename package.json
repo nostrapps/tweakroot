@@ -1,6 +1,6 @@
 {
   "name": "tweakroot",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "tweak a taproot pubkey using elliptic curve operations",
   "type": "module",
   "main": "lib/tweakroot.js",
